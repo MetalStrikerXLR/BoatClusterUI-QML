@@ -1,5 +1,30 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>Assets/Icons/BatteryIcon.png</file>
+        <file>Assets/Icons/CheckCircle.png</file>
+        <file>Assets/Icons/EngineTempIcon.png</file>
+        <file>Assets/Icons/OilIcon.png</file>
+        <file>Assets/Icons/SystemMsgBG.png</file>
+        <file>Assets/Widgets/LeftDial.png</file>
+        <file>Assets/Widgets/PS.png</file>
+        <file>Assets/Widgets/RightDial.png</file>
+        <file>Assets/Widgets/SystemMsg.png</file>
+        <file>Assets/Widgets/TempCardL.png</file>
+        <file>Assets/Widgets/TempCardR.png</file>
+        <file>Assets/Widgets/VoltCardL.png</file>
+        <file>Assets/Widgets/VoltCardR.png</file>
+        <file>Widgets/RightDial.qml</file>
+        <file>Widgets/LeftDial.qml</file>
+        <file>Components/CircularBar.qml</file>
+        <file>Widgets/SystemMessage.qml</file>
+        <file>Widgets/VoltageIndicatorLeft.qml</file>
+        <file>Widgets/VoltageIndicatorRight.qml</file>
+        <file>Widgets/TempMonitorRight.qml</file>
+        <file>Widgets/TempMonitorLeft.qml</file>
+        <file>Assets/Icons/progressBG.png</file>
+        <file>Assets/Widgets/DialCenter.png</file>
+        <file>Assets/Widgets/DialDisplayLeft.png</file>
+        <file>Assets/Widgets/DialDisplayRight.png</file>
     </qresource>
 </RCC>
