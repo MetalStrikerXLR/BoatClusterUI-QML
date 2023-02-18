@@ -1,0 +1,48 @@
+Reference: https://forums.raspberrypi.com/viewtopic.php?t=330264
+
+Step1). Install Qt libraries:
+- sudo apt-get update
+- sudo apt-get install -y gnustep gnustep-devel cmake kdelibs5-data subversion
+- sudo apt install qt5-default libqt5opengl5-dev
+- sudo apt install qtbase5-dev qtbase5-private-dev
+- sudo apt install qt5-qmltooling-plugins
+- sudo apt-get install qtdeclarative5-dev 
+- sudo apt-get install qml-module-qtquick-controls qml-module-qtquick-shapes qml-module-qtquick-controls2
+- sudo apt-get install qml-module-qtquick-*
+- sudo apt-get install libqt5multimedia5-plugins
+- sudo apt-get install libqt5serialport5-dev
+
+Step2). Install display server:
+- sudo apt-get install xorg
+- sudo nano /etc/X11/Xwrapper.config
+- allowed_users=console -> allowed_users=anybody
+- save changes
+
+Step3). Upload firmware code to Arduino Mega and connect to raspberry pi
+
+Step4). Test Serial UART:
+- minicom -b 115200 -D /dev/ttyUSB0 - (IF using UDB)
+- minicom -b 115200 -D /dev/ttyAMA0 - (IF using TTL Shifter)
+- You will start to get data if connections are good and arduino in powered on
+
+Step5). Copy UI code to raspberry pi and go inside directory
+
+Step6). Compile Qmake binary from source:
+- qmake -o Makefile <mainprojectfilename>.pro
+- make
+
+Step6.1). If make fails due to kill signal, increase swapfile size:
+- sudo dphys-swapfile swapoff
+- sudo nano /etc/dphys-swapfile
+- change CONF_SWAPSIZE to =2048
+- save file 
+- sudo dphys-swapfile swapon
+- make clean
+- make
+
+
+Step7). Run Application using Xorg:
+- export DISPLAY=:0
+- sudo startx <absolute path to binary> -geometry 1920x1080+0+0
+
+Note1: Enable OpenGL for QML app by going to raspi-config

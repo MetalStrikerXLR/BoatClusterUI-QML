@@ -163,7 +163,7 @@ ApplicationWindow {
 
     // For Testing
     Rectangle {
-        visible: true
+        visible: false
         color: "transparent"
         width: parent.width
         height: 110 * respHeightFactor
